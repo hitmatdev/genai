@@ -4,6 +4,13 @@ pip install gpt_index
 pip install langchain
 ```
 
-#run 
+/book directory has a sample text file. You can use the sample file for searching.
 
-python embedding.py 
+# Run 
+```
+python embedding.py
+```
+
+# Crawler
+
+A crawler can crawl the website you specify. If you want to use Crawler data as data source change path from "book" to /crawler/pages 

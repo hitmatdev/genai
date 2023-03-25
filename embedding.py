@@ -15,7 +15,7 @@ def create_vector_index():
   max_chunk_overlap = 20
   
   # name of the directory where *txt files are stored
-  path ="book"
+  path ="book"  #book is default. Use /crawler/pages if you are using web crawler outpyt 
   
   #define prompt 
   promptHelper = PromptHelper(max_input,tokens,max_chunk_overlap,chunk_size_limit=chunk_size)
