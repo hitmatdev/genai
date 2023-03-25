@@ -13,4 +13,4 @@ python embedding.py
 
 # Crawler
 
-A crawler can crawl the website you specify. If you want to use Crawler data as data source change path from "book" to /crawler/pages 
+The crawler can crawl the website you specify. If you want to use Crawler data as data source change path from "book" to /crawler/pages 
