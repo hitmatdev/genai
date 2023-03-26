@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 from urllib.parse import urlparse, urljoin
 
 # Set the URL of the website you want to crawl
-url = 'https://klick.com'
+url = 'https://endo.com'
 
 # Set the headers to send with the request
 headers = {
