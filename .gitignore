@@ -1,2 +1,5 @@
 config.py
 pages
+pdf_split_files
+
+.DS_Store

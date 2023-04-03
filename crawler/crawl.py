@@ -1,10 +1,12 @@
 import os
+import shutil
+
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse, urljoin
 
 # Set the URL of the website you want to crawl
-url = 'https://endo.com'
+url = 'https://www.opzelura.com/'
 
 # Set the headers to send with the request
 headers = {
@@ -27,7 +29,10 @@ soup = BeautifulSoup(response.content, 'html.parser')
 links = soup.find_all('a')
 
 # Create a directory to store the page files
-if not os.path.exists('pages'):
+if os.path.exists('pages'):
+    shutil.rmtree('pages')
+
+   # Create fresh
     os.mkdir('pages')
 
 # Loop through the links and crawl each page

@@ -20,7 +20,14 @@ def home():
 @app.route("/get")
 def get_bot_response():
     user_input = request.args.get('msg')+ " (give html formatted reply)"
-    vIndex = GPTSimpleVectorIndex.load_from_disk('/Users/hmathpal/Desktop/aiml/genai/vectorIndex.json')
+    kbase_embedding =  request.args.get('embedding')
+    vectorIndexJson = "vectorIndex.json"
+
+    if kbase_embedding == "hok" :
+        vectorIndexJson="bookVectorIndex.json" 
+    
+    print('vectorIndexJson : '+ '/Users/hmathpal/Desktop/aiml/genai/'+vectorIndexJson)
+    vIndex = GPTSimpleVectorIndex.load_from_disk('/Users/hmathpal/Desktop/aiml/genai/'+vectorIndexJson)
     response = vIndex.query(user_input, response_mode="compact")
     time.sleep(1)
     return str(response)
